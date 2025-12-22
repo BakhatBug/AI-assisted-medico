@@ -42,11 +42,7 @@ export const updateProfile = async (req: AuthRequest, res: Response): Promise<vo
         let profile = await HealthProfile.findOne({ user: req.user?._id });
 
         if (profile) {
-            // Check if significant changes warrant history entry (e.g. weight change)
-            // Or just always save history on explicit update?
-            // "Renew Plan" flow implies tracking progress, so let's save history if weight changes or explicitly requested.
-            // For now, let's assume every update is a potential progress check point.
-
+            // Save history if weight changed
             if (weight && weight !== profile.weight) {
                 profile.history?.push({
                     date: new Date(),

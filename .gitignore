@@ -5,7 +5,7 @@
 # ==========================================
 # SECURITY: Never commit sensitive data!
 # ==========================================
-# .env
+.env
 .env.local
 .env.production
 *.key

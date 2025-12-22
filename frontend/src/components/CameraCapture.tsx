@@ -87,7 +87,7 @@ const CameraCapture = ({ onValidationSuccess, onCapture }: CameraCaptureProps) =
                 setIsValid(false);
             }
         }
-    }, [webcamRef, countdown]); // Added countdown dep to update text
+    }, [webcamRef, countdown]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -126,7 +126,6 @@ const CameraCapture = ({ onValidationSuccess, onCapture }: CameraCaptureProps) =
                 return;
             }
         }
-        // Fallback
         onValidationSuccess();
     };
 
@@ -149,7 +148,7 @@ const CameraCapture = ({ onValidationSuccess, onCapture }: CameraCaptureProps) =
                     onUserMediaError={onUserMediaError}
                 />
 
-                {/* Overlay Grid (Rule of Thirds) - Optional for pro feel */}
+                {/* Overlay Grid (Rule of Thirds) */}
                 <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 opacity-20 pointer-events-none">
                     <div className="border-r border-white"></div>
                     <div className="border-r border-white"></div>
