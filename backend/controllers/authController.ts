@@ -34,6 +34,9 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
                 _id: user.id,
                 name: user.name,
                 email: user.email,
+                xp: user.xp,
+                level: user.level,
+                streak: user.streak,
                 token: generateToken(user.id),
             });
         } else {

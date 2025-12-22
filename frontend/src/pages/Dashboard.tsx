@@ -56,6 +56,41 @@ const Dashboard = () => {
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {/* Gamification Card */}
+                    <div className="bg-gradient-to-r from-violet-600 to-indigo-600 p-6 rounded-xl shadow-md text-white border border-indigo-500">
+                        <div className="flex justify-between items-start mb-4">
+                            <div>
+                                <div className="flex items-baseline gap-2">
+                                    <h3 className="text-2xl font-bold">Level {user.level || 1}</h3>
+                                    <span className="bg-white/20 px-2 py-0.5 rounded text-xs font-medium">Rank {user.level || 1}</span>
+                                </div>
+                                <p className="text-indigo-100 text-sm mt-1">{user.xp || 0} Total XP</p>
+                            </div>
+                            <div className="text-4xl filter drop-shadow-md">🏆</div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <div className="flex justify-between text-xs text-indigo-200">
+                                <span>Progress to Lvl {(user.level || 1) + 1}</span>
+                                <span>{((user.xp || 0) % 50) * 2}%</span>
+                            </div>
+                            <div className="w-full bg-black/20 rounded-full h-2.5 backdrop-blur-sm">
+                                <div
+                                    className="bg-white h-2.5 rounded-full transition-all duration-1000 ease-out shadow-sm"
+                                    style={{ width: `${Math.min(((user.xp || 0) % 50) * 2, 100)}%` }}
+                                ></div>
+                            </div>
+                        </div>
+
+                        <div className="mt-6 flex items-center gap-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/5">
+                            <span className="text-xl">🔥</span>
+                            <div>
+                                <p className="font-bold text-sm">{user.streak || 0} Day Streak</p>
+                                <p className="text-xs text-indigo-200">Login daily to boost your multiplier!</p>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* Metrics Card */}
                     <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                         <div className="flex items-center justify-between mb-4">
