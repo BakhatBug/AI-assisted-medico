@@ -27,8 +27,7 @@ const Login = () => {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
             <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8 border border-gray-100">
                 <div className="text-center mb-8">
-                    <div className="text-5xl mb-4">🩺</div>
-                    <h1 className="text-3xl font-bold text-slate-800 tracking-tight">Medico AI</h1>
+                    <img src="/assisted.png" alt="AI Assisted Medico" className="h-24 mx-auto mb-4 object-contain" />
                     <p className="text-slate-500 mt-2">Sign in to access your health plans</p>
                 </div>
 

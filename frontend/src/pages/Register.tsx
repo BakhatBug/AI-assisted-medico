@@ -29,7 +29,7 @@ const Register = () => {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
             <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8 border border-gray-100">
                 <div className="text-center mb-8">
-                    <div className="inline-block p-3 rounded-full bg-primary/10 text-3xl mb-4">🚀</div>
+                    <img src="/assisted.png" alt="AI Assisted Medico" className="h-20 mx-auto mb-4 object-contain" />
                     <h1 className="text-3xl font-bold text-slate-800 tracking-tight">Create Account</h1>
                     <p className="text-slate-500 mt-2">Join Medico AI and start your journey</p>
                 </div>
